@@ -1,0 +1,33 @@
+{
+  "name": "autoresearch",
+  "version": "0.3.0",
+  "description": "Autonomous Codex experiments with native continuation hooks, measured Git transactions, live dashboards, and finalization.",
+  "author": {
+    "name": "Autoresearch contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "autoresearch",
+    "experiments",
+    "optimization",
+    "benchmark",
+    "codex"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Autoresearch",
+    "shortDescription": "Experiment, measure, keep improvements, repeat.",
+    "longDescription": "Run, resume, measure, and finalize optimization experiments in Codex. Includes guarded native continuation and compaction hooks, metric validation, confidence scoring, local dashboards, and independent review branches.",
+    "developerName": "Autoresearch contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Run autoresearch to optimize this project.",
+      "Resume the autoresearch session in this project.",
+      "Summarize and finalize the kept experiments."
+    ]
+  }
+}

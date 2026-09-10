@@ -1,0 +1,37 @@
+{
+  "kind": "real Codex app-server integration test",
+  "version": "0.2.0+codex.20260908004346",
+  "method": "ephemeral thread with copied completed research state; turn/start, thread/compact/start, turn/start; no handler simulation",
+  "hook_receipts": [
+    {
+      "time": 1788828527.774554,
+      "event": "SessionStart",
+      "source": "startup",
+      "outcome": "context_emitted"
+    },
+    {
+      "time": 1788828527.914334,
+      "event": "UserPromptSubmit",
+      "source": null,
+      "outcome": "context_emitted"
+    },
+    {
+      "time": 1788828554.997945,
+      "event": "SessionStart",
+      "source": "compact",
+      "outcome": "context_emitted"
+    },
+    {
+      "time": 1788828555.132803,
+      "event": "UserPromptSubmit",
+      "source": null,
+      "outcome": "context_emitted"
+    }
+  ],
+  "model_responses": [
+    "- Visible hook labels: `SessionStart source=startup`, `UserPromptSubmit`.\n- `SessionStart source=compact`: absent.\n- Research goal: Native continuation lifecycle.\n- Remaining budget: 0 experiments.\n- Pending phase: None.\n- Reported active state: True.",
+    "- `SessionStart source=compact`: visible.\n- `UserPromptSubmit`: visible.\n- `SessionStart source=startup`: absent from current developer context.\n- Research goal: Native continuation lifecycle.\n- Remaining budget: 0 experiments.\n- Pending phase: None.\n- Reported active state: True."
+  ],
+  "original_research_task_modified": false,
+  "additional_benchmark_experiments": 0
+}

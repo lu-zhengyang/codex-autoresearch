@@ -1,0 +1,35 @@
+{
+  "installed_version": "0.2.0+codex.20260908005147",
+  "test": "real ephemeral Codex compaction, final installed build",
+  "receipts": [
+    {
+      "time": 1788828725.558461,
+      "event": "SessionStart",
+      "source": "startup",
+      "outcome": "context_emitted"
+    },
+    {
+      "time": 1788828725.684256,
+      "event": "UserPromptSubmit",
+      "source": null,
+      "outcome": "context_emitted"
+    },
+    {
+      "time": 1788828752.935832,
+      "event": "SessionStart",
+      "source": "compact",
+      "outcome": "context_emitted"
+    },
+    {
+      "time": 1788828753.0590138,
+      "event": "UserPromptSubmit",
+      "source": null,
+      "outcome": "context_emitted"
+    }
+  ],
+  "model_responses": [
+    "- Visible hook labels: `SessionStart source=startup`, `UserPromptSubmit`.\n- `SessionStart source=compact`: absent.\n- Research goal: Native continuation lifecycle.\n- Remaining budget: 0 experiments.\n- Pending phase: None.",
+    "- `SessionStart source=compact`: visible.\n- `UserPromptSubmit`: visible.\n- `SessionStart source=startup`: absent.\n- Research goal: Native continuation lifecycle.\n- Remaining budget: 0 experiments.\n- Pending phase: None.\n- Active: True."
+  ],
+  "result": "PASS: compact event executed and labeled context visible to next model request; correct goal, budget and pending state"
+}

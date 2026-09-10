@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-10",
+  "plugin_commit": "c1f091eaff0058f6445a53448f717afbf7c7af33",
+  "problem": "Count equal-value index pairs in a 7,000-element deterministic Python workload",
+  "metric": {
+    "name": "median_ms",
+    "unit": "ms",
+    "direction": "lower",
+    "method": "median of three timed calls after one correctness warm-up"
+  },
+  "experiments": [
+    {
+      "run": 1,
+      "status": "keep",
+      "implementation": "quadratic nested comparison baseline",
+      "metric": 602.030292,
+      "checks_passed": true
+    },
+    {
+      "run": 2,
+      "status": "keep",
+      "implementation": "sort values and aggregate equal runs",
+      "metric": 1.045125,
+      "checks_passed": true,
+      "commit": "2ab059c24e875f3d9adad102b3eef9cf084c28f8"
+    },
+    {
+      "run": 3,
+      "status": "keep",
+      "implementation": "collections.Counter frequency aggregation",
+      "metric": 0.322875,
+      "checks_passed": true,
+      "commit": "6dc2a2dc8feb646957b481999da288135a400403"
+    },
+    {
+      "run": 4,
+      "status": "discard",
+      "implementation": "one-pass Python dictionary accumulation",
+      "metric": 0.869875,
+      "checks_passed": true,
+      "rollback_verified": true
+    }
+  ],
+  "result": {
+    "best_metric": 0.322875,
+    "speedup": 1864.6,
+    "percent_reduction": 99.9464,
+    "final_checks_passed": true,
+    "working_tree_clean": true,
+    "iteration_budget_exhausted": true,
+    "session_deactivated": true,
+    "pending_transaction": false,
+    "full_dashboard_exported": true
+  }
+}
